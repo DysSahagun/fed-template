@@ -1,0 +1,356 @@
+/* This stylesheet contains all design-related modifications to the template */
+
+/*------------------------- Clearfix: for parents with floated children -------------------------*/
+.clearfix:before,
+.clearfix:after,
+.dialog-action:before,
+.dialog-action:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after,
+.dialog-action:after {
+    clear: both;
+}
+
+.clearfix,
+.dialog-action {
+    *zoom: 1;
+}
+
+/*------------------------- Image replacement: for elements with background image as main image such as a heading logo -------------------------*/
+.ir {
+	display:block;
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+/*------------------------- Hide visually: for content which is part of the document outline -------------------------*/
+.visuallyhidden,
+.assistive-text,
+.screen-reader-text,
+.site-description,
+legend,
+.dismiss-link .label {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*------------------------- Reset -------------------------*/
+h1, h2, h3, h4, h5, h6, p, nav ul, nav ol {margin:0;padding:0;}
+
+ol, ul {
+	margin:0;
+	padding:0;
+}
+
+/*------------------------- Skeleton -------------------------*/
+body {
+	overflow-y: scroll;
+}
+
+#masthead-cr,
+#main-cr,
+#colophon-cr,
+input[type="text"], input[type="password"], textarea, .pseudo-input-text-input,
+.dialog-box {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+/*------------------------- Tables -------------------------*/
+table,
+col.max {width:100%;}
+
+col.min {width:1px;}
+
+table {
+	margin-bottom: 1em;
+	border:none;
+}
+
+th, td {border:none;}
+
+th {
+	font-weight:normal;
+	color:#999;
+	border-bottom-width:2px;
+	text-align:left;
+}
+
+tr:nth-child(2n) td {
+	background-color: #fafafa;
+}
+
+/*------------------------- Forms -------------------------*/
+input[type="checkbox"] {vertical-align:middle;}
+
+label {display:block;}
+
+select {
+	padding: .25em;
+}
+
+textarea {min-height:1.75em;}
+
+.field {margin-bottom:1em;}
+
+.field-action {
+	margin-bottom: 0;
+}
+
+/*------------------------- Form labels -------------------------*/
+.textarea-label {vertical-align:top;}
+
+.checkbox-label,
+.radio-label {
+	display:inline-block;
+	cursor:pointer;
+}
+
+/* Makes these form UIs responsive to its container */
+input[type="text"],
+input[type="password"],
+textarea {width:100%;}
+
+/* Resets the native style of form elements */
+.ui-txt input,
+.no-touch .ui-txt select,
+.ui-txt textarea,
+.ui-btn button {
+	padding:0;
+	background-color:transparent;
+	border:none;
+}
+
+/* Remove formatting in mobile browsers -- Modernizr must be active because it adds the .touch class in the <html> tag 
+.touch input[type="text"],
+.touch input[type="email"],
+.touch input[type="search"],
+.touch input[type="password"] {
+	-webkit-appearance:caret;
+	-moz-appearance:caret;
+	border-radius:0;
+}*/
+
+/* Removes the outline that Google Chrome puts when in focus on several form elements */
+.ui-txt input[type="text"]:focus,
+.ui-txt input[type="email"]:focus,
+.ui-txt input[type="search"]:focus,
+.ui-txt input[type="password"]:focus,
+.ui-txt select:focus,
+.ui-txt textarea:focus {outline:none;}
+
+/*------------------------- UI texts -------------------------*/
+.ui-txt-select {display:inline-block;}
+
+.ui-txt textarea {min-height:1.5em;}
+
+/*------------------------- UI buttons -------------------------*/
+.ui-btn {
+	display:inline-block;
+	min-width:4em;
+	line-height:normal;
+	text-align:center;
+}
+
+.ui-btn a {
+	display:block;
+	text-decoration:none;
+}
+
+.ui-btn-disabled a,
+button[disabled]{cursor:not-allowed;}
+
+/*------------------------- Dialog -------------------------*/
+#dialog {
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	overflow-x:hidden;
+	overflow-y:auto;
+	z-index:20;
+}
+
+#overlay {
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	filter:alpha(opacity=75);
+	-moz-opacity:.75;
+	-khtml-opacity:.75;
+	opacity:.75;
+	background-color:black;
+	z-index:10;
+}
+
+#dialog.active,
+#overlay.active {display:block;}
+
+.dialog-active body {overflow-y:hidden;}
+
+.no-touch.dialog-active #page {padding-right:17px;}
+
+.dialog-box {
+	position:absolute;
+	padding: 3em 1em;
+	width:100%;
+}
+
+.dialog-box {
+	display: none;
+}
+
+.dialog-box.active {
+	display: block;
+}
+
+.dialog-box-cr {	
+	background-color:#fff;
+	border:1px solid #ccc;
+	border-radius:.5em;
+}
+
+.dialog-headers {
+	position:relative;
+	padding: 0.5em 2em .5em .75em;
+}
+
+.dialog-title {font-size:1em;}
+
+/*------------------------- Dismiss link -------------------------*/
+.dismiss-link {
+	position: absolute;
+	top: 0;
+	right:0;
+	margin-top: 4px;
+	margin-right:.25em;
+	padding: .35em;
+}
+
+.dismiss-link:active {
+	top: 1px;
+}
+
+.dialog-content {
+	padding:.75em;
+}
+
+.dialog-action {padding:.5em;}
+
+.dialog-action .ui-btn,
+.dialog-box .field-action .ui-btn {
+	float:right;
+	margin-left:1em;
+	margin-right:0;
+}
+
+.dialog-action .ui-btn:last-child,
+.dialog-box .field-action .ui-btn:last-child {margin-left:0;}
+
+/*------------------------- Notification message -------------------------*/
+.notif {margin-bottom:1em;}
+
+.notif-cr {
+	position:relative;
+	padding:.25em .5em;
+	padding-right: 2em;
+	background-color:#fff;
+	border:2px solid #ccc;
+	border-radius:.25em;
+}
+
+.notif p:last-of-type {margin-bottom:0;}
+
+/* Regular */
+.notif-msg .notif-cr {	
+	background-color:#fff9b8;
+	border-color:#ffed60;
+}
+
+/* Error */
+.notif-error .notif-cr {
+	background-color:#ffdcdd;
+	border-color:#ffbec0;
+}
+
+.dismiss-link .icon {
+	display: block;
+	width: 12px;
+	height: 12px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAQCAYAAAB3AH1ZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDozRTJDMEI5OTA4N0FFMTExQUMxREE2RTQ2OTZEOTJCQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4RTNGOUY2QUI2RTAxMUUyOTUwN0EwMTA0MjhCMjVENyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4RTNGOUY2OUI2RTAxMUUyOTUwN0EwMTA0MjhCMjVENyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDM4MDExNzQwNzIwNjgxMTkxMDlDNTlBNEYxMjc3NDMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6M0UyQzBCOTkwODdBRTExMUFDMURBNkU0Njk2RDkyQkMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4SfBIkAAABPklEQVR42qSVwarCQAxFg3/SrVAoDBTexwuuCoKrgp8x0K2PSl7Sl5ExNsmIgbtyJuc2eCcAAB3pRELShTSAXUc5g3KnQ0TWCf/rQhpIYOgoZ1DuMBvO0rBoIY07cDaW1dmJmpzxtRbSuANnY1mdnbjxqpoWEymAs1ZqsuJ7sYkUwLmY/RypVhYTFpx1q0aqK4sJC851A4EsjgkLvk1JIItjwoJvUyojHh0TFvynGvHomLDg2/26UqMJDS9KjSaecG2gmMgRnA8aMUvOyN/grIMy8IC4fp3fvro/BF+v/3wtOccooq2j343oB6O3IrrB+yBqXkR7atIHUfMi2nsPUXmSvYhenYeoPMleRK9s4O7Ao4jyM3x34FFE10+WUfpyGSVrGfFKnKTh3LCO52p1l3U8ScO5YR3P1eru/gQYAJpYMg0Ne6YUAAAAAElFTkSuQmCC);
+	background-size: 24px auto;
+	opacity: .25;
+}
+
+.dismiss-link:hover .icon {
+	opacity: .5;
+}
+
+/*------------------------- IE -------------------------*/
+.lt-ie8,
+.lt-ie8 body {
+	overflow-y: auto;
+}
+
+.lt-ie8.dialog-active  {
+	overflow-y: hidden;
+}
+
+/* Dialog */
+.lt-ie9 .dialog-box {
+	left:50%;
+	margin-left:-240px;
+	width:480px;
+}
+
+.lt-ie9 .dialog-action .ui-btn {
+	float:right;
+	margin-left:1em;
+	margin-right:0;
+}
+
+/* Notification */
+.lt-ie9 .notif p {margin-bottom:0;}
+
+@media only screen and (min-width: 600px) {
+	
+	.dialog-box {
+		left:50%;
+		margin-left:-240px;
+		width:480px;
+	}
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+	/*------------------------- Content minimum height -------------------------*/
+	#main-cr {
+		min-height: 420px;
+	}
+	
+}
