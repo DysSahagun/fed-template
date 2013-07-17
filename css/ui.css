@@ -20,7 +20,7 @@
 }
 
 /*------------------------- Image replacement: for elements with background image as main image such as a heading logo -------------------------*/
-.ir {
+.ir{
 	display:block;
     background-color: transparent;
     border: 0;
@@ -41,7 +41,8 @@
 .screen-reader-text,
 .site-description,
 legend,
-.dismiss-link .label {
+.dismiss-link .label,
+.throbber .label {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -270,6 +271,85 @@ button[disabled]{cursor:not-allowed;}
 
 .dialog-action .ui-btn:last-child,
 .dialog-box .field-action .ui-btn:last-child {margin-left:0;}
+
+/*------------------------- Throbber -------------------------*/
+/* Container of the block throbber -- block throbber is when an overlay fills the entire content and shows a throbber on the middle */
+.loading-block {
+	position: relative;
+}
+
+.throbber,
+.loading-block .throbber em,
+.throbber em:before,
+.loading-block .throbber em:after {
+	width: 32px;
+	height: 32px;
+}
+
+.throbber,
+.loading-block .throbber em {
+	position: relative;
+	display: inline-block;
+}
+
+/* The overlay of the content */
+.loading-block .throbber {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #bfbfbf;
+	background-color: hsla(0, 0%, 0%, .25);
+}
+
+.loading-block .throbber em,
+.loading-block .throbber em:after {
+	padding: .25em;
+}
+
+/* The wrapper to position the block throbber at the middle */
+.loading-block .throbber em {
+	display: block;
+	top: 50%;
+	left: 50%;
+	margin-top: -1.25em;
+	margin-left: -1.25em;
+}
+
+.throbber em:before,
+.loading-block .throbber em:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* The image throbber */
+.throbber em:before {
+	background-image: url(../img/throbber.gif);
+}
+
+.loading-block .throbber em:before {
+	margin-top: .25em;
+	margin-left: .25em;
+}
+
+/* The throbber box */
+.loading-block .throbber em:after {
+	background-color: #404040;
+	background-color: hsla(0, 0%, 0%, .75);
+	border-radius: .25em;
+}
+
+.loading-block .throbber em:before {
+	z-index: 20;
+}
+
+.loading-block .throbber em:after {
+	z-index: 10;
+}
+
 
 /*------------------------- Notification message -------------------------*/
 .notif {margin-bottom:1em;}
