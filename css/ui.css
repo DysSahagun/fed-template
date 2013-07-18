@@ -350,6 +350,14 @@ button[disabled]{cursor:not-allowed;}
 	z-index: 10;
 }
 
+.loading-block > * {
+	opacity: .25;
+}
+
+.loading-block .throbber {
+	opacity: 1;
+}
+
 
 /*------------------------- Notification message -------------------------*/
 .notif {margin-bottom:1em;}
