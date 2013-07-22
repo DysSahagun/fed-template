@@ -2,8 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -16,15 +15,10 @@
         
         <!-- Use proper sizing of content elements so that there's no need to scale higher than 1.5
             https://developer.mozilla.org/en-US/docs/Mobile/Viewport_meta_tag -->
-        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.5">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
 
-        <!-- Hi-res favicon - 128 x 128; favicon.ico resides in the root directory
-            http://www.netmagazine.com/features/create-perfect-favicon -->
-        <link rel="icon" type="image/png" href="img/favicon.png">
-        
         <!-- Facebook OpenGraph tags
             http://www.quicksprout.com/2013/03/25/social-media-meta-tags-how-to-use-open-graph-and-cards/ -->
-        <meta property="fb:admins" content=""> <!-- FB admin id found in http://graph.facebook.com/username -->
         <meta property="og:type" content="website"> <!-- There are other types for this -->
         <meta property="og:site_name" content="Site title">
         <meta property="og:url" content="http://">
@@ -46,7 +40,7 @@
     </head>
     <body>
         <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <div id="page" class="page-home">
@@ -368,17 +362,19 @@
         </div><!--.dialog-->
         <div id="overlay"></div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
     </body>
 </html>

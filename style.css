@@ -552,31 +552,42 @@ textarea:focus {color:#222;}
 	
 	/*------------------------- Skeleton -------------------------*/
 	#primary {
-		float:right;
+		float: left;
 		width:75%;
 	}
 	
 	#secondary {
-		float:left;
+		float: left;
 		width:25%;
 	}
 	
 	/*------------------------- Footer -------------------------*/
-	.footer-nav {margin-bottom:0;}
+	.footer-nav {
+		margin-bottom: 0;
+	}
 	
 	.footer-nav-list,
-	.copyright {text-align:left;}
+	.copyright {
+		text-align: left;
+	}
 	
-	.footer-nav-list li {float:left;}
+	.footer-nav-list li {
+		float: left;
+	}
 	
 	.footer-nav-list li a,
 	.copyright {
-		display:block;
-		padding:.25em 1em;
+		display: block;
+		padding: .25em 1em;
 	}
 	
-	.footer-nav {float:left;}
-	.copyright {float:right;}
+	.footer-nav {
+		float: left;
+	}
+	
+	.copyright {
+		float: right;
+	}
 	
 }
 
