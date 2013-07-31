@@ -4,23 +4,27 @@
 .clearfix:before,
 .clearfix:after,
 .dialog-action:before,
-.dialog-action:after {
+.dialog-action:after,
+dl:before,
+dl:after {
     content: " ";
     display: table;
 }
 
 .clearfix:after,
-.dialog-action:after {
+.dialog-action:after,
+dl:after {
     clear: both;
 }
 
 .clearfix,
-.dialog-action {
+.dialog-action,
+dl {
     *zoom: 1;
 }
 
 /*------------------------- Image replacement: for elements with background image as main image such as a heading logo -------------------------*/
-.ir{
+.ir {
 	display:block;
     background-color: transparent;
     border: 0;
@@ -158,6 +162,20 @@ textarea {width:100%;}
 .ui-txt input[type="password"]:focus,
 .ui-txt select:focus,
 .ui-txt textarea:focus {outline:none;}
+
+/*------------------------- Lists -------------------------*/
+dt, dd {
+	float: left;
+}
+
+dt {
+	clear: left;
+	font-weight: bold;
+}
+
+dd {
+	margin-left: 1em;
+}
 
 /*------------------------- UI texts -------------------------*/
 .ui-txt-select {display:inline-block;}
